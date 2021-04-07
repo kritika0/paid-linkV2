@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous"/>
+        <title>Website</title>
+    </head>
+    <body
+        onload="createCaptcha()">
+        <!-- navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="200">
+            </div>
+            <div id="mobileHeader">
+                <div id="MenuBar" onclick="toggleNav();">&#9776;</div>
+                <nav id="navMobile">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="advertise.html">Advertise</a>
+                        </li>
+                        <li>
+                            <a href="ques.html">Questions</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <button class="btn1" id="Mobbtn">
+                        <a href="join.html">
+                            <i class="fas fa-user"></i>Join Now</a>
+                    </button><br>
+                    <button class="btn2" id="Mobbtn">
+                        <a href="login.html">
+                            <i class="fas fa-sign-in-alt"></i>Members</a>
+                    </button>
+                </nav>
+
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advertise.html">Advertise</a></li>
+                    <li><a href="ques.html">Questions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="btn1" id="btn">
+                <a href="join.html">
+                    <i class="fas fa-user"></i>Join Now</a>
+            </button>
+            <button class="btn2" id="btn">
+                <a href="login.html">
+                    <i class="fas fa-sign-in-alt"></i>Members</a>
+            </button>
+        </div>
+        <!-- container -->
+        <div class="ad-container">
+            <h2>Advertise on PTC PTR Demo</h2>
+            <p>
+                <b>PTC PTR Demo Advertising Options</b>
+                Promote your web site here at PTC PTR Demo.
+                                                                                                                                            With PTC PTR Demo, there are couple of different ways that you can promote your product or 
+                                                                                                                                            web site. We have options that cater to a variety of advertising needs as well as different budget-types. 
+                                                                                                                                            These options give you the opportunity to take advantage of the large number of users and the visitors that use the site daily.</p>
+            <ol>
+                <li>Banner Advertisement:</li>
+                <p>LTC 1.0000 per 1000 Banner Impressions rotated at the bottom of each page.<br>
+                    LTC 2.0000 per 1000 Banner Impressions rotated at the top of each page.</p>
+                <li>PaidLinks Advertisement:</li>
+                <p>For just LTC 4.0000, you can get unlimited visitors to your website. Our first 400 members will get
+                                                                                                                                                                paid for visiting your website . You'll continue to receive traffic because your link will be 
+                                                                                                                                                                displayed on our links page forever but it will be rotated down when your funds get low as we display the
+                                                                                                                                                                links in order of hits remaining.
+                                                                                                                                                                The more you fund your link, the more traffic you'll get!</p>
+                <li>Paid 2 Read Email Advertisement:</li>
+                <p>For just LTC 5.0000, you can get your solo ad sent to our members with a guaranteed clickthru of 400 visitors
+                                                                                                                                                                                             to your website. Our first members will get paid for visiting your website.</p>
+                <li>
+                    Link Box Advertisement:
+                </li>
+                <p>For just LTC 5.0000, you can get your link displayed at the bottom of
+                                                                                                                                                                 all the pages of our website for 1 month(s).
+                </p>
+                <li>Paid 2 Signup Offer / Pay per action Advertisement:</li>
+                <p>You can offer special incentives to our members for joining your free/paid offer. 
+                                                                                                                                                                For this advertisement you need to<a href="">
+                        Contact Us</a>.</p>
+            </ol>
+            <div class="form2">
+
+                <h3>For Banner Advertisement!!</h3>
+                <div class="row1">
+                    <div class="col-1">
+                        <label>Banner Url:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" value="http://"></div>
+                </div>
+                <div class="row1">
+                    <div class="col-1">
+                        <label>Website Url:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" value="http://"></div>
+                </div>
+
+                <div class="row1">
+                    <div class="col-1">
+                        <label>Impressions:</label>
+                    </div>
+                    <div class="col-3">
+                        <select>
+                            <option>10,000 Impression</option>
+                            <option>20,000 Impression</option>
+                            <option>50,000 Impression</option>
+                            <option>1,00,000 Impression</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="col-1">
+                        <label>Banner Position:</label>
+                    </div>
+                    <div class="col-3">
+
+                        <select>
+                            <option>Top banner Position</option>
+                            <option>bottom banner Position</option>
+
+                        </select>
+                    </div>
+                </div>
+                <button class="button">Preview
+
+
+                </button>
+            </div>
+            <div class="form3">
+                <h3>For Other Advertisement Packages!!</h3>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Ad Type:</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" name="packagetype" onchange="javascript: window.location = 'index.php?packagetype='+this.value;">
+                                <option value="LAP">Link Ad</option>
+                                <option value="REP">Read Email Ad</option>
+                                <option value="LBA">Link Box Ads</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <form method="post" action="advertise.php" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Link's Text:</label>
+                        <div class="col-sm-9"><input class="form-control" type="text" name="text" size="20" maxlength="150"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Link's URL:</label>
+                        <div class="col-sm-9"><input class="form-control" type="text" name="url" size="20" value="http://"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Amount of Funding:</label>
+                        <div class="col-sm-9" id="radio">
+                            <label><input type="radio" name="pkg" value="1">
+                                LTC 4.0000 (400+ Visitors)</label>
+                            <label><input type="radio" name="pkg" value="2">
+                                LTC 8.0000 (800+ Visitors)</label><br>
+                            <label><input type="radio" name="pkg" value="3">
+                                LTC 12.0000 (1200+ Visitors)</label>
+                            <label><input type="radio" name="pkg" value="4">
+                                LTC 16.0000 (1600+ Visitors)</label>
+                            <label><input type="radio" name="pkg" value="5">
+                                LTC 20.0000 (2000+ Visitors)</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Special Features:</label>
+                        <div class="col-sm-9">
+                            <label><input type="checkbox" name="bold" value="yes">
+                                Bold Link (LTC 1.0000)</label>
+                            <label><input type="checkbox" name="high" value="yes">
+                                Highlighted Link (LTC 2.0000)</label>
+                        </div>
+                    </div>
+                    <button class="button">Submit</button>
+                    <p>(We do not allow sites with adult content)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <a href="index.html">Home</a>
+            <span class="dot">&bull;</span>
+            <a href="join.html">Join Now
+            </a>
+            <span class="dot">&bull;</span>
+            <a href="">FAQ</a>
+            <span class="dot">&bull;</span>
+            <a href="contact.html">Contact Us
+            </a>
+            <span class="dot">&bull;</span>
+            <a href="advertise.html">Advertise
+            </a>
+            <span class="dot">&bull;</span>
+            <a href="login.html">Members
+            </a>
+            <p>Copyright © 2021.All Rights Reserved by PTC PTR Demo</p>
+            <p>Powered by
+                <span>
+                    <a href="https://www.YourFreeWorld.com" target="_blank">
+                        www.YourFreeWorld.com Scripts</a>
+                </span>
+            </p>
+        </footer>
+        <script>
+            function toggleNav() {
+                var currentState = document.getElementById("navMobile").style.display;
+
+                if (currentState == 'block') 
+                    document.getElementById("navMobile").style.display = 'none';
+                 else 
+                    document.getElementById("navMobile").style.display = "block";
+                
+
+
+                // document.getElementById("navMobile").style.width = "250px";
+            }
+        </script>
+    </body>
+</html>

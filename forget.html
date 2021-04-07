@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Forget Password</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="200">
+            </div>
+            <div id="mobileHeader">
+                <div id="MenuBar" onclick="toggleNav();">&#9776;</div>
+                <nav id="navMobile">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="advertise.html">Advertise</a>
+                        </li>
+                        <li>
+                            <a href="ques.html">Questions</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <button class="btn1" id="Mobbtn">
+                        <a href="join.html">
+                            <i class="fas fa-user"></i>Join Now</a>
+                    </button><br>
+                    <button class="btn2" id="Mobbtn">
+                        <a href="login.html">
+                            <i class="fas fa-sign-in-alt"></i>Members</a>
+                    </button>
+                </nav>
+
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advertise.html">Advertise</a></li>
+                    <li><a href="ques.html">Questions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="btn1" id="btn">
+                <a href="join.html">
+                    <i class="fas fa-user"></i>Join Now</a>
+            </button>
+            <button class="btn2" id="btn">
+                <a href="login.html">
+                    <i class="fas fa-sign-in-alt"></i>Members</a>
+            </button>
+        </div>
+        <!-- conatct-form -->
+        <div class="login-container">
+            <div class="login-form">
+                <div class="head">
+                    <h2>Password Reminder</h2>
+                </div>
+
+                <div class="row1">
+                    <p>Please enter the Email address you used to register at and then press submit.</p>
+
+                    <div class="forget_input">
+
+                        <input type="password" id="password" name="password" style="text-align: center;"></div>
+                </div>
+                <div class="log-footer">
+
+                <button class="button-2">Submit</button><br>
+                <span class="pass">Your Password will be sent to you within few minutes.</span>
+            </div>
+            </div>
+
+        </form>
+   </div></div>
+   <!-- footer -->
+   <footer>
+    <a href="index.html">Home</a> <span class="dot">&bull;</span>
+    <a href="join.html">Join Now </a><span class="dot">&bull;</span>
+    <a href="">FAQ</a><span class="dot">&bull;</span>
+    <a href="contact.html">Contact Us </a><span class="dot">&bull;</span>
+    <a href="advertise.html">Advertise </a><span class="dot">&bull;</span>
+    <a href="login.html">Members </a>
+    <p>Copyright © 2021.All Rights Reserved by PTC PTR Demo</p>
+    <p>Powered by
+        <span>
+            <a href="https://www.YourFreeWorld.com" target="_blank">
+                www.YourFreeWorld.com Scripts</a>
+        </span>
+    </p>
+</footer>
+   <script>function toggleNav() {
+    var currentState = document.getElementById("navMobile").style.display;
+
+    if (currentState == 'block') 
+        document.getElementById("navMobile").style.display = 'none';
+     else 
+        document.getElementById("navMobile").style.display = "block";
+    
+
+
+    // document.getElementById("navMobile").style.width = "250px";
+}</script></body></html>

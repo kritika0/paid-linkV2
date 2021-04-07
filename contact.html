@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Contact Us</title>
+    </head>
+    <body onload="createCaptcha()">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="200">
+            </div>
+            <div id="mobileHeader">
+                <div id="MenuBar" onclick="toggleNav();">&#9776;</div>
+                <nav id="navMobile">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="advertise.html">Advertise</a>
+                        </li>
+                        <li>
+                            <a href="ques.html">Questions</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <button class="btn1" id="Mobbtn">
+                        <a href="join.html">
+                            <i class="fas fa-user"></i>Join Now</a>
+                    </button><br>
+                    <button class="btn2" id="Mobbtn">
+                        <a href="login.html">
+                            <i class="fas fa-sign-in-alt"></i>Members</a>
+                    </button>
+                </nav>
+
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="advertise.html">Advertise</a></li>
+                    <li><a href="ques.html">Questions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="btn1" id="btn">
+                <a href="join.html">
+                    <i class="fas fa-user"></i>Join Now</a>
+            </button>
+            <button class="btn2" id="btn">
+                <a href="login.html">
+                    <i class="fas fa-sign-in-alt"></i>Members</a>
+            </button>
+        </div>
+        <!-- conatct-form -->
+        <form onsubmit="validateCaptcha()">
+            <div class="contact">
+                <div class="head">
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="contact-form">
+                    <form action="/action_page.php" class="contact-form">
+                        <div class="row1">
+                            <div class="col-1">
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="name" name="name" placeholder="Your name..">
+                            </div>
+                        </div>
+                        <div class="row1">
+                            <div class="col-1">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="email" name="Email" placeholder="Your Email"></div>
+                        </div>
+                        <div class="row1">
+                            <div class="col-1">
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="text" id="subject" name="subject" placeholder="Subject"></div>
+                        </div>
+
+
+                        <div class="row1">
+                            <div class="col-1">
+                                <label for="subject">Message</label>
+                            </div>
+                            <div class="col-2">
+                                <textarea id="message" name="subject" placeholder="message" style="height:100px"></textarea>
+                            </div>
+                        </div>
+                        <div class="row1">
+                            <div id="captcha"></div>
+                            <div class="col-1">
+                                <label for="subject">Security Code</label>
+                            </div>
+                            <div class="col-2">
+                                <div id="captcha"></div>
+                                <input type="text" placeholder="Captcha" id="cpatchaTextBox"/>
+                            </div>
+
+                        </div>
+
+                        <button class="button-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer>
+                <a href="index.html">Home</a>
+                <span class="dot">&bull;</span>
+                <a href="join.html">Join Now
+                </a>
+                <span class="dot">&bull;</span>
+                <a href="">FAQ</a>
+                <span class="dot">&bull;</span>
+                <a href="contact.html">Contact Us
+                </a>
+                <span class="dot">&bull;</span>
+                <a href="advertise.html">Advertise
+                </a>
+                <span class="dot">&bull;</span>
+                <a href="login.html">Members
+                </a>
+                <p>Copyright © 2021.All Rights Reserved by PTC PTR Demo</p>
+                <p>Powered by
+                    <span>
+                        <a href="https://www.YourFreeWorld.com" target="_blank">
+                            www.YourFreeWorld.com Scripts</a>
+                    </span>
+                </p>
+            </footer>
+            <script>
+                function toggleNav() {
+                    var currentState = document.getElementById("navMobile").style.display;
+
+                    if (currentState == 'block') 
+                        document.getElementById("navMobile").style.display = 'none';
+                     else 
+                        document.getElementById("navMobile").style.display = "block";
+                    
+
+
+                    // document.getElementById("navMobile").style.width = "250px";
+                }
+
+                var code;
+                function createCaptcha() { // clear the contents of captcha div first
+                    document.getElementById('captcha').innerHTML = "";
+                    var charsArray = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+                    var lengthOtp = 6;
+                    var captcha = [];
+                    for (var i = 0; i < lengthOtp; i++) { // below code will not allow Repetition of Characters
+                        var index = Math.floor(Math.random() * charsArray.length + 1); // get the next character from the array
+                        if (captcha.indexOf(charsArray[index]) == -1) 
+                            captcha.push(charsArray[index]);
+                         else 
+                            i--;
+                        
+
+                    }
+                    var canv = document.createElement("canvas");
+                    canv.id = "captcha";
+                    canv.width = 100;
+                    canv.height = 50;
+                    var ctx = canv.getContext("2d");
+                    ctx.font = "25px Georgia";
+                    ctx.strokeText(captcha.join(""), 0, 30);
+                    // storing captcha so that can validate you can save it somewhere else according to your specific requirements
+                    code = captcha.join("");
+                    document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+                }
+                function validateCaptcha() {
+                    event.preventDefault();
+                    debugger
+                    if (document.getElementById("cpatchaTextBox").value == code) {
+                        alert("Valid Captcha")
+                    } else {
+                        alert("Invalid Captcha. try Again");
+                        createCaptcha();
+                    }
+                }
+            </script>
+        </body>
+    </body>
+</html>
